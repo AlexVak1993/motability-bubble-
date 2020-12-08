@@ -1,0 +1,11 @@
+.audi {
+  background-image: url(../img/content-audi.png);
+
+  &__container {
+    background: url(../img/bubbles/audi-vector2.png) no-repeat 0 -20%,
+      url(../img/bubbles/audi-vector1.png) no-repeat 50% 60%;
+  }
+}
+.citroen {
+  background-image: url(../img/content-citroen.png);
+}

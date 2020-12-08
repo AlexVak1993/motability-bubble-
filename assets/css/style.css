@@ -1,0 +1,215 @@
+/* ul */
+/* xl */
+/* lg */
+/* md */
+/* sm */
+/* xs */
+/* xx */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.hero {
+  width: 1280px;
+  max-height: 723px;
+  background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
+  background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
+  overflow: hidden;
+}
+
+.hero__title {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 7.875rem;
+  line-height: 0.4;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.hero__title span {
+  color: #FF9901;
+}
+
+.hero__container {
+  position: relative;
+  height: 630px;
+}
+
+.hero__container_honda {
+  height: 630px;
+  width: 630px;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  z-index: 3;
+  background-image: url(../img/hero-honda.png);
+}
+
+.hero__container_citroen {
+  width: 530px;
+  height: 290px;
+  position: absolute;
+  top: 23%;
+  right: 9%;
+  z-index: 2;
+  background-image: url(../img/hero-citroen.png);
+}
+
+.hero__container_audi {
+  width: 600px;
+  height: 420px;
+  position: absolute;
+  top: 7%;
+  left: 4%;
+  z-index: 2;
+  background-image: url(../img/hero-audi.png);
+}
+
+.hero__container_jeep {
+  width: 490px;
+  height: 225px;
+  position: absolute;
+  top: 25%;
+  right: 0;
+  background-image: url(../img/hero-jeep.png);
+}
+
+.hero__container_vw {
+  width: 590px;
+  height: 320px;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  background-image: url(../img/hero-vw.png);
+}
+
+.presentation {
+  background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/presentation-bg-icon.png) no-repeat;
+  background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/presentation-bg-icon.png) no-repeat;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+}
+
+.presentation__container {
+  max-width: 1082px;
+  margin: 0 auto;
+}
+
+.presentation__description {
+  font-size: 1.375rem;
+}
+
+.presentation__column {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.presentation__column p {
+  width: 45%;
+}
+
+.content {
+  height: 812px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.content__container {
+  width: 55%;
+  height: 100%;
+}
+
+.content__container_wrapper {
+  padding-top: 160px;
+  margin-left: 140px;
+  padding-right: 120px;
+}
+
+.content__container_wrapper h2 {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+}
+
+.content__container_wrapper h3 {
+  padding-bottom: 30px;
+  font-size: 3rem;
+  line-height: 1.125;
+  font-weight: 400;
+  font-family: "Anton", sans-serif;
+}
+
+.content__container_wrapper p {
+  padding-bottom: 30px;
+}
+
+.content__container_wrapper a {
+  padding: 18px;
+  border: 1px solid #FFFFFF;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background: -o-linear-gradient(359.26deg, #FF9901 47.4%, rgba(255, 255, 255, 0) 100%), #FCB117;
+  background: linear-gradient(90.74deg, #FF9901 47.4%, rgba(255, 255, 255, 0) 100%), #FCB117;
+}
+
+.content__specials {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 60px;
+  padding-right: 60px;
+}
+
+.content__specials span {
+  padding: 20px 10px;
+  position: relative;
+}
+
+.content__specials span:first-of-type {
+  margin-right: 30px;
+}
+
+.content__specials span::before {
+  position: absolute;
+  top: 0%;
+  left: -10%;
+  width: 2px;
+  height: 65px;
+  content: "";
+  background-color: #FFFFFF;
+}
+
+.content__specials img {
+  margin-right: 20px;
+}
+
+.audi {
+  background-image: url(../img/content-audi.png);
+}
+
+.audi__container {
+  background: url(../img/bubbles/audi-vector2.png) no-repeat 0 -20%, url(../img/bubbles/audi-vector1.png) no-repeat 50% 60%;
+}
+
+.citroen {
+  background-image: url(../img/content-citroen.png);
+}

@@ -1,0 +1,25 @@
+.presentation {
+  background: $color-gradient url(./../img/presentation-bg-icon.png) no-repeat;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 100px;
+
+  &__container {
+    max-width: 1082px;
+    margin: 0 auto;
+  }
+
+  &__description {
+    font-size: 1.375rem;
+  }
+
+  &__column {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      width: 45%;
+    }
+  }
+}
