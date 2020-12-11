@@ -1,13 +1,39 @@
 .footer {
   background: $color-gradient url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
-  padding: 100px 60px 50px 60px;
+  padding: 40px;
+
+  @include md-min {
+    padding: 100px 60px 50px 60px;
+  }
 
   &__container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    @include md-min {
+      flex-direction: row;
+    }
   }
 
   &__description {
-    max-width: 750px;
+    margin-bottom: 20px;
+
+    @include md-min {
+      margin-bottom: 0;
+      flex: 0 0 60%;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 80%;
+      margin-left: 30px;
+      
+      @include md-min {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
   }
 }

@@ -1,8 +1,14 @@
 .hero {
+  display: none;
   width: 1280px;
   height: 723px;
+  margin-bottom: 100px;
   background: url(../img/cars.png) no-repeat 0% 100%,
     $color-gradient url(./../img/hero-bg-icon.png) no-repeat 50%;
+
+  @include xl-min {
+    display: block;
+  }
 
   &__title {
     padding-top: 150px;

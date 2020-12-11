@@ -12,82 +12,168 @@
   }
 
   &__container {
-    width: 55%;
     height: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @include xl-min {
+      width: 55%;
+    }
+    @include lg-min {
+      width: 70%;
+    }
+    @include md-min {
+      width: 90%;
+    }
 
     &_wrapper {
-      padding-top: 160px;
+      @include sm {
+        background: $color-gradient;
+        border-radius: 10px;
+        padding: 0 10px;
+      }
+      @include sm-min {
+        padding-top: 20px;
+      }
+      @include md-min {
+        padding-top: 100px;
+      }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 2;
         font-weight: 400;
         font-family: $font-head;
+        text-align: center;
+
+        @include sm-min {
+          text-align: left;
+          font-size: 1.5rem;
+        }
       }
       h3 {
-        padding-bottom: 30px;
-        font-size: 3rem;
+        padding-bottom: 10px;
+        font-size: 2rem;
         line-height: 1.125;
         font-weight: 400;
         font-family: $font-head;
+        text-align: center;
+
+        @include sm-min {
+          text-align: left;
+          font-size: 3rem;
+          padding-bottom: 30px;
+        }
       }
 
       p {
-        padding-bottom: 30px;
+        padding-bottom: 10px;
+        font-size: 0.75rem;
+
+        @include sm-min {
+          font-size: 1rem;
+          padding-bottom: 30px;
+        }
       }
 
       a {
-        padding: 18px;
+        padding: 9px;
         border: 1px solid $color-text;
         display: block;
         text-align: center;
         text-decoration: none;
         color: inherit;
         background: $color-link-gradient;
+        transition: all .3s;
+
+        @include sm {
+          margin: 0 -10px;
+        }
+        @include sm-min {
+          padding: 18px;
+        }
+
+        &:hover {
+          background: linear-gradient(
+              90.87deg,
+              #ff4d01 55.19%,
+              rgba(255, 255, 255, 0) 116.44%
+            ), #FC4E17;
+        }
       }
     }
-  }
+  }  
 
   &:nth-child(odd) {
     .content__specials {
-      left: 0;
-      padding-left: 60px;
-      padding-right: 40px;
-      border-bottom-right-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      @include md-min {
+        background-color: transparent;
+        justify-content: flex-start;
+      }
     }
   }
   &:nth-child(even) {
     .content__specials {
-      right: 0;
-      padding-right: 60px;
-      padding-left: 40px;
-      border-bottom-left-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      @include md-min {
+        justify-content: flex-end;
+        background-color: transparent;
+      }
     }
   }
 
   &__specials {
-    position: absolute;
-    top: 0;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    @include md-min {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @include sm-min {
+      flex-direction: row;
+    }
 
     span {
-      padding: 20px 10px;
+      padding: 10px 0;
       position: relative;
+      text-align: center;
 
-      &:first-of-type {
-        margin-right: 30px;
+      @include lg-min {
+        font-size: 1rem;
+      }
+      @include md-min {
+        font-size: 0.875rem;
+        margin: 0 30px;
+      }
+      @include sm-min {
+        padding: 20px 10px;
+        &:first-of-type {
+          margin-right: 20px;
+        }
       }
 
       &::before {
+        display: none;
         position: absolute;
-        top: 0%;
+        top: 15%;
         left: -10%;
         width: 2px;
-        height: 65px;
+        height: 50px;
         content: "";
         background-color: $color-text;
+
+        @include sm-min {
+          display: block;
+        }
+
+        @include md-min {
+          height: 65px;
+          top: 0;
+        }
       }
     }
     img {

@@ -13,8 +13,10 @@ body {
 }
 
 .hero {
+  display: none;
   width: 1280px;
   height: 723px;
+  margin-bottom: 100px;
   background: url(../img/cars.png) no-repeat 0% 100%, -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
   background: url(../img/cars.png) no-repeat 0% 100%, linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
 }
@@ -37,18 +39,15 @@ body {
 .presentation {
   background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/presentation-bg-icon.png) no-repeat;
   background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/presentation-bg-icon.png) no-repeat;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-top: 100px;
 }
 
 .presentation__container {
-  max-width: 1082px;
   margin: 0 auto;
+  padding: 40px;
 }
 
 .presentation__description {
-  font-size: 1.375rem;
+  font-size: 1rem;
 }
 
 .presentation__column {
@@ -59,10 +58,19 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 0.875rem;
 }
 
 .presentation__column p {
-  width: 45%;
+  width: 100%;
+}
+
+.presentation__column p:first-of-type {
+  margin-bottom: 20px;
 }
 
 .content {
@@ -78,35 +86,35 @@ body {
 }
 
 .content__container {
-  width: 55%;
   height: 100%;
-}
-
-.content__container_wrapper {
-  padding-top: 160px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .content__container_wrapper h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 2;
   font-weight: 400;
   font-family: "Anton", sans-serif;
+  text-align: center;
 }
 
 .content__container_wrapper h3 {
-  padding-bottom: 30px;
-  font-size: 3rem;
+  padding-bottom: 10px;
+  font-size: 2rem;
   line-height: 1.125;
   font-weight: 400;
   font-family: "Anton", sans-serif;
+  text-align: center;
 }
 
 .content__container_wrapper p {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 0.75rem;
 }
 
 .content__container_wrapper a {
-  padding: 18px;
+  padding: 9px;
   border: 1px solid #FFFFFF;
   display: block;
   text-align: center;
@@ -114,45 +122,51 @@ body {
   color: inherit;
   background: -o-linear-gradient(359.26deg, #FF9901 47.4%, rgba(255, 255, 255, 0) 100%), #FCB117;
   background: linear-gradient(90.74deg, #FF9901 47.4%, rgba(255, 255, 255, 0) 100%), #FCB117;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.content__container_wrapper a:hover {
+  background: -o-linear-gradient(359.13deg, #ff4d01 55.19%, rgba(255, 255, 255, 0) 116.44%), #FC4E17;
+  background: linear-gradient(90.87deg, #ff4d01 55.19%, rgba(255, 255, 255, 0) 116.44%), #FC4E17;
 }
 
 .content:nth-child(odd) .content__specials {
-  left: 0;
-  padding-left: 60px;
-  padding-right: 40px;
-  border-bottom-right-radius: 10px;
-}
-
-.content:nth-child(even) .content__specials {
-  right: 0;
-  padding-right: 60px;
-  padding-left: 40px;
-  border-bottom-left-radius: 10px;
-}
-
-.content__specials {
-  position: absolute;
-  top: 0;
-  padding-top: 60px;
-  padding-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.content__specials span {
-  padding: 20px 10px;
-  position: relative;
+.content:nth-child(even) .content__specials {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.content__specials span:first-of-type {
-  margin-right: 30px;
+.content__specials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.content__specials span {
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
 }
 
 .content__specials span::before {
+  display: none;
   position: absolute;
-  top: 0%;
+  top: 15%;
   left: -10%;
   width: 2px;
-  height: 65px;
+  height: 50px;
   content: "";
   background-color: #FFFFFF;
 }
@@ -165,71 +179,26 @@ body {
   background-image: url(../img/content-audi.png);
 }
 
-.audi__container {
-  background: url(../img/bubbles/audi-vector2.png) no-repeat 0 -20%, url(../img/bubbles/audi-vector1.png) no-repeat 50% 60%;
-}
-
-.audi__container_wrapper {
-  margin-left: 140px;
-  padding-right: 120px;
-}
-
 .citroen {
   background-image: url(../img/content-citroen.png);
-}
-
-.citroen__container {
-  background: url(../img/bubbles/citroen-vector1.png) no-repeat 100% 50%, url(../img/bubbles/citroen-vector2.png) no-repeat 20% 120%;
-}
-
-.citroen__container_wrapper {
-  margin-left: 190px;
-  padding-right: 70px;
 }
 
 .vw {
   background-image: url(../img/content-vw.png);
 }
 
-.vw__container {
-  background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 30%, url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
-}
-
-.vw__container_wrapper {
-  margin-left: 70px;
-  padding-right: 180px;
-}
-
 .honda {
   background-image: url(../img/content-honda.png);
-}
-
-.honda__container {
-  background: url(../img/bubbles/honda-vector1.png) no-repeat 100% 65%, url(../img/bubbles/honda-vector2.png) no-repeat 0% 45%;
-}
-
-.honda__container_wrapper {
-  margin-left: 190px;
-  padding-right: 70px;
 }
 
 .jeep {
   background-image: url(../img/content-jeep.png);
 }
 
-.jeep__container {
-  background: url(../img/bubbles/jeep-vector1.png) no-repeat 0% 45%, url(../img/bubbles/jeep-vector2.png) no-repeat 0% 75%;
-}
-
-.jeep__container_wrapper {
-  margin-left: 70px;
-  padding-right: 180px;
-}
-
 .footer {
   background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
   background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
-  padding: 100px 60px 50px 60px;
+  padding: 40px;
 }
 
 .footer__container {
@@ -239,8 +208,211 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer__description {
-  max-width: 750px;
+  margin-bottom: 20px;
+}
+
+.footer__logo img {
+  width: 80%;
+  margin-left: 30px;
+}
+
+@media (min-width: 425px) {
+  .presentation__description {
+    font-size: 1.375rem;
+  }
+  .presentation__column {
+    font-size: 1rem;
+  }
+  .content__container_wrapper {
+    padding-top: 20px;
+  }
+  .content__container_wrapper h2 {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  .content__container_wrapper h3 {
+    text-align: left;
+    font-size: 3rem;
+    padding-bottom: 30px;
+  }
+  .content__container_wrapper p {
+    font-size: 1rem;
+    padding-bottom: 30px;
+  }
+  .content__container_wrapper a {
+    padding: 18px;
+  }
+  .content__specials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .content__specials span {
+    padding: 20px 10px;
+  }
+  .content__specials span:first-of-type {
+    margin-right: 20px;
+  }
+  .content__specials span::before {
+    display: block;
+  }
+  .audi__container {
+    background: url(../img/bubbles/audi-vector2.png) no-repeat 0 -20%, url(../img/bubbles/audi-vector1.png) no-repeat 50% 60%;
+  }
+  .citroen__container {
+    background: url(../img/bubbles/citroen-vector1.png) no-repeat 100% 50%, url(../img/bubbles/citroen-vector2.png) no-repeat 20% 120%;
+    background-size: contain;
+  }
+  .vw__container {
+    background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 45%, url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
+    background-size: contain;
+  }
+  .honda__container {
+    background: url(../img/bubbles/honda-vector1.png) no-repeat 100% 65%, url(../img/bubbles/honda-vector2.png) no-repeat 0% 45%;
+  }
+  .jeep__container {
+    background: url(../img/bubbles/jeep-vector1.png) no-repeat 0% 45%, url(../img/bubbles/jeep-vector2.png) no-repeat 0% 75%;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 769px) {
+  .presentation {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .presentation__container {
+    padding: 0 90px;
+  }
+  .presentation__column {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .presentation__column p {
+    width: 45%;
+  }
+  .content__container {
+    width: 90%;
+  }
+  .content__container_wrapper {
+    padding-top: 100px;
+  }
+  .content:nth-child(odd) .content__specials {
+    background-color: transparent;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .content:nth-child(even) .content__specials {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: transparent;
+  }
+  .content__specials {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .content__specials span {
+    font-size: 0.875rem;
+    margin: 0 30px;
+  }
+  .content__specials span::before {
+    height: 65px;
+    top: 0;
+  }
+  .audi__container_wrapper {
+    margin-left: 140px;
+    padding-right: 120px;
+  }
+  .citroen__container_wrapper {
+    margin-left: 190px;
+    padding-right: 70px;
+  }
+  .vw__container {
+    background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 45%, url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
+  }
+  .vw__container_wrapper {
+    margin-left: 70px;
+    padding-right: 180px;
+  }
+  .honda__container_wrapper {
+    margin-left: 190px;
+    padding-right: 70px;
+  }
+  .jeep__container_wrapper {
+    margin-left: 70px;
+    padding-right: 180px;
+  }
+  .footer {
+    padding: 100px 60px 50px 60px;
+  }
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer__description {
+    margin-bottom: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+  }
+  .footer__logo img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .presentation__container {
+    padding: 0 180px;
+  }
+  .content__container {
+    width: 70%;
+  }
+  .content__specials span {
+    font-size: 1rem;
+  }
+  .citroen__container {
+    background-size: auto;
+  }
+  .vw__container {
+    background-size: auto;
+  }
+  .jeep__container {
+    background-size: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    display: block;
+  }
+  .content__container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 424.8px) {
+  .content__container_wrapper {
+    background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82;
+    background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+  .content__container_wrapper a {
+    margin: 0 -10px;
+  }
 }
