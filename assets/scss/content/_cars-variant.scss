@@ -45,12 +45,12 @@
       background-size: auto;
     }
     @include md-min {
-      background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 45%,
-        url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
+      background: url(../img/bubbles/vw-vector1.png) no-repeat 0 45%,
+        url(../img/bubbles/vw-vector2.png) no-repeat 0 100%;
     }
     @include sm-min {
-      background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 45%,
-        url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
+      background: url(../img/bubbles/vw-vector1.png) no-repeat 0 45%,
+        url(../img/bubbles/vw-vector2.png) no-repeat 0 100%;
       background-size: contain;
     }
 
@@ -69,7 +69,7 @@
   &__container {
     @include sm-min {
       background: url(../img/bubbles/honda-vector1.png) no-repeat 100% 65%,
-        url(../img/bubbles/honda-vector2.png) no-repeat 0% 45%;
+        url(../img/bubbles/honda-vector2.png) no-repeat 0 45%;
     }
 
     &_wrapper {
@@ -89,8 +89,8 @@
       background-size: auto;
     }
     @include sm-min {
-      background: url(../img/bubbles/jeep-vector1.png) no-repeat 0% 45%,
-        url(../img/bubbles/jeep-vector2.png) no-repeat 0% 75%;
+      background: url(../img/bubbles/jeep-vector1.png) no-repeat 0 45%,
+        url(../img/bubbles/jeep-vector2.png) no-repeat 0 75%;
       background-size: contain;
     }
 

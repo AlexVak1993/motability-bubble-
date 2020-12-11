@@ -1,6 +1,7 @@
 .footer {
-  background: $color-gradient url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
   padding: 40px;
+
+  background: $color-gradient url(./../img/footer-bg-icon.png) no-repeat 100% 0;
 
   @include md-min {
     padding: 100px 60px 50px 60px;
@@ -8,9 +9,9 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
 
+    justify-content: space-between;
     @include md-min {
       flex-direction: row;
     }
@@ -21,6 +22,7 @@
 
     @include md-min {
       margin-bottom: 0;
+
       flex: 0 0 60%;
     }
   }
@@ -29,7 +31,7 @@
     img {
       width: 80%;
       margin-left: 30px;
-      
+
       @include md-min {
         width: 100%;
         margin-left: 0;

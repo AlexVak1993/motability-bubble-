@@ -44,9 +44,9 @@ function scss() {
 
 function scssDev() {
   return src(path.scssFile, {sourcemaps: true}).
-    pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).
+    pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)).
     pipe(postcss(plugins)).
-    pipe(dest(path.cssFolder, {sourcemaps: true})).
+    pipe(dest(path.cssFolder, {sourcemaps: false})).
     pipe(notify({
       message: 'Compiled!',
       sound: false

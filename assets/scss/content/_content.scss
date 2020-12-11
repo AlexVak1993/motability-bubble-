@@ -1,9 +1,11 @@
 .content {
-  height: 812px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   position: relative;
+
+  height: 812px;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 
   &:nth-child(odd) {
     .content__container {
@@ -28,9 +30,10 @@
 
     &_wrapper {
       @include sm {
-        background: $color-gradient;
-        border-radius: 10px;
         padding: 0 10px;
+
+        border-radius: 10px;
+        background: $color-gradient;
       }
       @include sm-min {
         padding-top: 20px;
@@ -40,51 +43,62 @@
       }
 
       h2 {
-        font-size: 1.25rem;
-        line-height: 2;
-        font-weight: 400;
         font-family: $font-head;
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2;
+
         text-align: center;
 
         @include sm-min {
-          text-align: left;
           font-size: 1.5rem;
+
+          text-align: left;
         }
       }
       h3 {
-        padding-bottom: 10px;
-        font-size: 2rem;
-        line-height: 1.125;
-        font-weight: 400;
         font-family: $font-head;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.125;
+
+        padding-bottom: 10px;
+
         text-align: center;
 
         @include sm-min {
-          text-align: left;
           font-size: 3rem;
+
           padding-bottom: 30px;
+
+          text-align: left;
         }
       }
 
       p {
-        padding-bottom: 10px;
         font-size: 0.75rem;
+
+        padding-bottom: 10px;
 
         @include sm-min {
           font-size: 1rem;
+
           padding-bottom: 30px;
         }
       }
 
       a {
-        padding: 9px;
-        border: 1px solid $color-text;
         display: block;
+
+        padding: 9px;
+
+        transition: all 0.3s;
         text-align: center;
         text-decoration: none;
+
         color: inherit;
+        border: 1px solid $color-text;
         background: $color-link-gradient;
-        transition: all .3s;
 
         @include sm {
           margin: 0 -10px;
@@ -98,17 +112,20 @@
               90.87deg,
               #ff4d01 55.19%,
               rgba(255, 255, 255, 0) 116.44%
-            ), #FC4E17;
+            ),
+            #fc4e17;
         }
       }
     }
-  }  
+  }
 
   &:nth-child(odd) {
     .content__specials {
       background-color: rgba(0, 0, 0, 0.4);
+
       @include md-min {
         background-color: transparent;
+
         justify-content: flex-start;
       }
     }
@@ -116,19 +133,22 @@
   &:nth-child(even) {
     .content__specials {
       background-color: rgba(0, 0, 0, 0.4);
+
       @include md-min {
-        justify-content: flex-end;
         background-color: transparent;
+
+        justify-content: flex-end;
       }
     }
   }
 
   &__specials {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+
     width: 100%;
 
+    justify-content: center;
     @include md-min {
       padding-top: 20px;
       padding-bottom: 20px;
@@ -138,8 +158,10 @@
     }
 
     span {
-      padding: 10px 0;
       position: relative;
+
+      padding: 10px 0;
+
       text-align: center;
 
       @include lg-min {
@@ -147,6 +169,7 @@
       }
       @include md-min {
         font-size: 0.875rem;
+
         margin: 0 30px;
       }
       @include sm-min {
@@ -157,22 +180,26 @@
       }
 
       &::before {
-        display: none;
         position: absolute;
         top: 15%;
         left: -10%;
+
+        display: none;
+
         width: 2px;
         height: 50px;
+
         content: "";
+
         background-color: $color-text;
 
         @include sm-min {
           display: block;
         }
-
         @include md-min {
-          height: 65px;
           top: 0;
+
+          height: 65px;
         }
       }
     }
