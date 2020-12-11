@@ -14,10 +14,9 @@ body {
 
 .hero {
   width: 1280px;
-  max-height: 723px;
-  background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
-  background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
-  overflow: hidden;
+  height: 723px;
+  background: url(../img/cars.png) no-repeat 0% 100%, -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
+  background: url(../img/cars.png) no-repeat 0% 100%, linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/hero-bg-icon.png) no-repeat 50%;
 }
 
 .hero__title {
@@ -33,62 +32,6 @@ body {
 
 .hero__title span {
   color: #FF9901;
-}
-
-.hero__container {
-  position: relative;
-  height: 630px;
-}
-
-.hero__container_honda {
-  height: 630px;
-  width: 630px;
-  position: absolute;
-  top: 0;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
-  z-index: 3;
-  background-image: url(../img/hero-honda.png);
-}
-
-.hero__container_citroen {
-  width: 530px;
-  height: 290px;
-  position: absolute;
-  top: 23%;
-  right: 9%;
-  z-index: 2;
-  background-image: url(../img/hero-citroen.png);
-}
-
-.hero__container_audi {
-  width: 600px;
-  height: 420px;
-  position: absolute;
-  top: 7%;
-  left: 4%;
-  z-index: 2;
-  background-image: url(../img/hero-audi.png);
-}
-
-.hero__container_jeep {
-  width: 490px;
-  height: 225px;
-  position: absolute;
-  top: 25%;
-  right: 0;
-  background-image: url(../img/hero-jeep.png);
-}
-
-.hero__container_vw {
-  width: 590px;
-  height: 320px;
-  position: absolute;
-  top: 15%;
-  left: 0;
-  background-image: url(../img/hero-vw.png);
 }
 
 .presentation {
@@ -130,6 +73,10 @@ body {
   position: relative;
 }
 
+.content:nth-child(odd) .content__container {
+  margin-left: auto;
+}
+
 .content__container {
   width: 55%;
   height: 100%;
@@ -137,8 +84,6 @@ body {
 
 .content__container_wrapper {
   padding-top: 160px;
-  margin-left: 140px;
-  padding-right: 120px;
 }
 
 .content__container_wrapper h2 {
@@ -171,12 +116,26 @@ body {
   background: linear-gradient(90.74deg, #FF9901 47.4%, rgba(255, 255, 255, 0) 100%), #FCB117;
 }
 
+.content:nth-child(odd) .content__specials {
+  left: 0;
+  padding-left: 60px;
+  padding-right: 40px;
+  border-bottom-right-radius: 10px;
+}
+
+.content:nth-child(even) .content__specials {
+  right: 0;
+  padding-right: 60px;
+  padding-left: 40px;
+  border-bottom-left-radius: 10px;
+}
+
 .content__specials {
   position: absolute;
   top: 0;
-  right: 0;
   padding-top: 60px;
-  padding-right: 60px;
+  padding-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .content__specials span {
@@ -210,6 +169,78 @@ body {
   background: url(../img/bubbles/audi-vector2.png) no-repeat 0 -20%, url(../img/bubbles/audi-vector1.png) no-repeat 50% 60%;
 }
 
+.audi__container_wrapper {
+  margin-left: 140px;
+  padding-right: 120px;
+}
+
 .citroen {
   background-image: url(../img/content-citroen.png);
+}
+
+.citroen__container {
+  background: url(../img/bubbles/citroen-vector1.png) no-repeat 100% 50%, url(../img/bubbles/citroen-vector2.png) no-repeat 20% 120%;
+}
+
+.citroen__container_wrapper {
+  margin-left: 190px;
+  padding-right: 70px;
+}
+
+.vw {
+  background-image: url(../img/content-vw.png);
+}
+
+.vw__container {
+  background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 30%, url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
+}
+
+.vw__container_wrapper {
+  margin-left: 70px;
+  padding-right: 180px;
+}
+
+.honda {
+  background-image: url(../img/content-honda.png);
+}
+
+.honda__container {
+  background: url(../img/bubbles/honda-vector1.png) no-repeat 100% 65%, url(../img/bubbles/honda-vector2.png) no-repeat 0% 45%;
+}
+
+.honda__container_wrapper {
+  margin-left: 190px;
+  padding-right: 70px;
+}
+
+.jeep {
+  background-image: url(../img/content-jeep.png);
+}
+
+.jeep__container {
+  background: url(../img/bubbles/jeep-vector1.png) no-repeat 0% 45%, url(../img/bubbles/jeep-vector2.png) no-repeat 0% 75%;
+}
+
+.jeep__container_wrapper {
+  margin-left: 70px;
+  padding-right: 180px;
+}
+
+.footer {
+  background: -o-linear-gradient(161.24deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
+  background: linear-gradient(288.76deg, rgba(4, 148, 220, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #123F82 url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
+  padding: 100px 60px 50px 60px;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__description {
+  max-width: 750px;
 }

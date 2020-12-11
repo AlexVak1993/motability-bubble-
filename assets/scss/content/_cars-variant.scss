@@ -4,8 +4,65 @@
   &__container {
     background: url(../img/bubbles/audi-vector2.png) no-repeat 0 -20%,
       url(../img/bubbles/audi-vector1.png) no-repeat 50% 60%;
+
+    &_wrapper {
+      margin-left: 140px;
+      padding-right: 120px;
+    }
   }
 }
 .citroen {
   background-image: url(../img/content-citroen.png);
+
+  &__container {
+    background: url(../img/bubbles/citroen-vector1.png) no-repeat 100% 50%,
+      url(../img/bubbles/citroen-vector2.png) no-repeat 20% 120%;
+
+    &_wrapper {
+      margin-left: 190px;
+      padding-right: 70px;
+    }
+  }
+}
+
+.vw {
+  background-image: url(../img/content-vw.png);
+
+  &__container {
+    background: url(../img/bubbles/vw-vector1.png) no-repeat 0% 30%,
+      url(../img/bubbles/vw-vector2.png) no-repeat 0% 100%;
+
+    &_wrapper {
+      margin-left: 70px;
+      padding-right: 180px;
+    }
+  }
+}
+
+.honda {
+  background-image: url(../img/content-honda.png);
+
+  &__container {
+    background: url(../img/bubbles/honda-vector1.png) no-repeat 100% 65%,
+    url(../img/bubbles/honda-vector2.png) no-repeat 0% 45%;
+
+    &_wrapper {
+      margin-left: 190px;
+      padding-right: 70px;
+    }
+  }
+}
+
+.jeep {
+  background-image: url(../img/content-jeep.png);
+
+  &__container {
+    background: url(../img/bubbles/jeep-vector1.png) no-repeat 0% 45%,
+    url(../img/bubbles/jeep-vector2.png) no-repeat 0% 75%;
+
+    &_wrapper {
+      margin-left: 70px;
+      padding-right: 180px;
+    }
+  }
 }

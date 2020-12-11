@@ -5,14 +5,18 @@
   background-attachment: fixed;
   position: relative;
 
+  &:nth-child(odd) {
+    .content__container {
+      margin-left: auto;
+    }
+  }
+
   &__container {
     width: 55%;
     height: 100%;
 
     &_wrapper {
       padding-top: 160px;
-      margin-left: 140px;
-      padding-right: 120px;
 
       h2 {
         font-size: 1.5rem;
@@ -44,12 +48,29 @@
     }
   }
 
+  &:nth-child(odd) {
+    .content__specials {
+      left: 0;
+      padding-left: 60px;
+      padding-right: 40px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  &:nth-child(even) {
+    .content__specials {
+      right: 0;
+      padding-right: 60px;
+      padding-left: 40px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
   &__specials {
     position: absolute;
     top: 0;
-    right: 0;
     padding-top: 60px;
-    padding-right: 60px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, .4);
 
     span {
       padding: 20px 10px;

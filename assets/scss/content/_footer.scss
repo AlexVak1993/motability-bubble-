@@ -1,0 +1,13 @@
+.footer {
+  background: $color-gradient url(./../img/footer-bg-icon.png) no-repeat 100% 0%;
+  padding: 100px 60px 50px 60px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    max-width: 750px;
+  }
+}

@@ -1,8 +1,8 @@
 .hero {
   width: 1280px;
-  max-height: 723px;
-  background: $color-gradient url(./../img/hero-bg-icon.png) no-repeat 50%;
-  overflow: hidden;
+  height: 723px;
+  background: url(../img/cars.png) no-repeat 0% 100%,
+    $color-gradient url(./../img/hero-bg-icon.png) no-repeat 50%;
 
   &__title {
     padding-top: 150px;
@@ -16,55 +16,6 @@
 
     & span {
       color: $color-accent;
-    }
-  }
-
-  &__container {
-    position: relative;
-    height: 630px;
-    &_honda {
-      height: 630px;
-      width: 630px;
-      position: absolute;
-      top: 0;
-      right: 50%;
-      transform: translateX(50%);
-      z-index: 3;
-      background-image: url(../img/hero-honda.png);
-    }
-    &_citroen {
-      width: 530px;
-      height: 290px;
-      position: absolute;
-      top: 23%;
-      right: 9%;
-      z-index: 2;
-      background-image: url(../img/hero-citroen.png);
-    }
-    &_audi {
-      width: 600px;
-      height: 420px;
-      position: absolute;
-      top: 7%;
-      left: 4%;
-      z-index: 2;
-      background-image: url(../img/hero-audi.png);
-    }
-    &_jeep {
-      width: 490px;
-      height: 225px;
-      position: absolute;
-      top: 25%;
-      right: 0;
-      background-image: url(../img/hero-jeep.png);
-    }
-    &_vw {
-      width: 590px;
-      height: 320px;
-      position: absolute;
-      top: 15%;
-      left: 0;
-      background-image: url(../img/hero-vw.png);
     }
   }
 }
